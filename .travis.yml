@@ -10,10 +10,12 @@ python: 3.6
 
 # Install the codecov pip dependency
 install:
+  - pip install pytest
   - pip install codecov
 
 # Run the unit test
 script:
+  - pytest
   - coverage run test_hello.py
 
 # Push the results back to codecov
